@@ -96,33 +96,3 @@ sudo rm -rf /sys/kernel/config/nvmet/subsystems/*
 sudo rm -rf /sys/kernel/config/nvmet/ports/*
 sudo modprobe -r nvmet_tcp nvmet
 ```
-
-## Troubleshooting
-
-| Issue | Check |
-|-------|-------|
-| SSH fails | Verify IP, credentials, sshd_config allows password auth |
-| Network fails | Verify interface names, NetworkManager running |
-| Namespace fails | Check controller exists, sufficient capacity |
-| Port not listening | Check `lsmod \| grep nvmet`, `dmesg \| grep nvmet` |
-
-## Security Notes
-
-**Test Configuration:**
-- Password authentication
-- `allow_any_host: true`
-- No TLS encryption
-
-**Production:**
-- Use SSH keys
-- Configure host ACLs
-- Enable firewall rules
-- Consider TLS
-
-## License
-
-GNU General Public License v2 or later
-
-## Copyright
-
-2026 IBM

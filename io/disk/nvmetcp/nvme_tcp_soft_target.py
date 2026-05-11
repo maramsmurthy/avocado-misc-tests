@@ -112,7 +112,7 @@ class NVMeTCPSoftTarget(Test):
                 'namespace_config_nvme_controller'
             )
             self.ns_config['number_of_namespaces'] = self.params.get(
-                'namespace_config_number_of_namespaces', default=4
+                'namespace_config_number_of_namespaces', default=1
             )
             self.ns_config['namespace_size'] = self.params.get(
                 'namespace_config_namespace_size', default=None
